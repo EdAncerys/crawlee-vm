@@ -1,8 +1,11 @@
 import express, { Request, Response } from 'express';
+import dotenv from 'dotenv';
 
 const app = express();
 app.use(express.json()); // Parse JSON bodies
-const PORT = 8080;
+
+dotenv.config();
+const PORT = process.env.PORT || 8080;
 
 app.get('/', (_req, res) => {
   console.log('Running script...');
