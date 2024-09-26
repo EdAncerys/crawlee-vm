@@ -1,13 +1,15 @@
 # add permisions to execute: chmod +x build.sh
 
-echo "Clearing existing build...."
-rm -rf build.old
-mv build build.old
-echo "Removing node_modules..."
+echo "✨ Starting new build..."
+echo "🚫 Clearing existing build..."
+rm -rf dist
+echo "🚫 Removing node_modules..."
 rm -rf node_modules
+echo "Checking for git updates..."
+git pull
 echo "Installing npm modules..."
-yarn
-echo "Building Frontity..."
-yarn build
-echo "\nRestarting server..."
+npm install
+echo "Building app..."
+npm run build
+echo "Restarting server..."
 pm2 restart all

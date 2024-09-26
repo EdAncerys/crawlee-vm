@@ -20,11 +20,14 @@
   },
   "scripts": {
     "dev": "tsx src/server.ts",
+    "pm2:dev": "pm2 start src/server.ts",
+    "pm2:stop": "pm2 stop src/server.ts",
     "kill:port": "kill -9 $(lsof -t -i :4321)",
     "start": "npm run start:dev",
     "start:prod": "node dist/main.js",
     "start:dev": "tsx src/main.ts",
     "build": "tsc",
+    "b-test": "./build.sh",
     "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1",
     "postinstall": "npx crawlee install-playwright-browsers"
   },
