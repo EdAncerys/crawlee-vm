@@ -26,8 +26,8 @@
     "start": "npm run start:dev",
     "start:prod": "node dist/main.js",
     "start:dev": "tsx src/main.ts",
-    "build": "tsc",
-    "b-test": "./build.sh",
+    "build:tsc": "tsc",
+    "build": "./build.sh",
     "test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1",
     "postinstall": "npx crawlee install-playwright-browsers"
   },
