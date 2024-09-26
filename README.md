@@ -26,3 +26,27 @@ Send requests to the Express API to trigger scraping jobs, which will run in the
 ## Contributing
 
 Feel free to submit issues or pull requests for improvements or features.
+
+## Digital ocean firewall configuration
+
+Enable the Firewall. First, you need to enable the firewall to make the rules active:
+
+```bash
+sudo ufw enable
+```
+
+## Allow Port 8080
+
+Once ufw is enabled, you can re-apply the rule to allow traffic on port 8080:
+
+```bash
+sudo ufw allow 8080/tcp
+```
+
+## Check the Firewall Status
+
+After allowing the port, check the status of ufw to verify that the rules are correctly applied:
+
+```bash
+sudo ufw status
+```

@@ -10,7 +10,7 @@ dotenv.config(); // Load .env.local file
 // --------------------------------------------------------------------------------
 // 📌  Configuration
 // --------------------------------------------------------------------------------
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 8080;
 
 app.get('/', async (_req: Request, res: any) => {
   try {
@@ -41,6 +41,6 @@ app.post('/run-script', async (req: Request, res: any) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Listening on PORT ${PORT}...`);
 });
