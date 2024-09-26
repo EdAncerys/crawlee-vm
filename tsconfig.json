@@ -1,12 +1,22 @@
 {
-	"extends": "@apify/tsconfig",
-	"compilerOptions": {
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"target": "ES2022",
-		"outDir": "dist",
-		"noUnusedLocals": false,
-		"lib": ["DOM"]
-	},
-	"include": ["./src/**/*"]
+  "extends": "@apify/tsconfig",
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "outDir": "dist",
+    "noUnusedLocals": false
+  },
+  "include": ["./src/**/*"]
 }
