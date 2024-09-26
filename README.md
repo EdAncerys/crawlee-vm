@@ -1,8 +1,28 @@
-# Crawlee + PlaywrightCrawler + TypeScript project
+# Web Scraping Application
 
-This template is a production ready boilerplate for developing with `PlaywrightCrawler`. Use this to bootstrap your projects using the most up-to-date code.
+This project is a web scraping application built with Node.js, using Express for the server framework and Crawlee for efficient data extraction. The application utilizes BullMQ for job queuing and PM2 for process management, ensuring reliable and scalable scraping operations.
 
-If you're looking for examples or want to learn more visit:
+## Features
 
-- [Documentation](https://crawlee.dev/api/playwright-crawler/class/PlaywrightCrawler)
-- [Examples](https://crawlee.dev/docs/examples/playwright-crawler)
+- **Express**: Lightweight web framework for building APIs.
+- **Crawlee**: Powerful web scraping library for extracting data from websites.
+- **BullMQ**: Redis-based queue for managing background jobs and tasks.
+- **Playwright**: Browser automation library for headless scraping.
+- **dotenv**: Loads environment variables from a `.env` file for secure configuration.
+- **PM2**: Process manager for keeping applications alive and managing logs.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
+
+## Usage
+
+Send requests to the Express API to trigger scraping jobs, which will run in the background and store results as specified.
+
+## Contributing
+
+Feel free to submit issues or pull requests for improvements or features.
