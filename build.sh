@@ -7,9 +7,9 @@ echo "🚫 Removing node_modules..."
 rm -rf node_modules
 echo "Checking for git updates..."
 git pull
-echo "Installing npm modules..."
-npm install
+echo "Installing yarn modules..."
+yarn install
 echo "Building app..."
-npm run build:tsc
+yarn run build:tsc
 echo "Restarting server..."
-# pm2 restart all
+pm2 restart all
