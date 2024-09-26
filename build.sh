@@ -10,6 +10,6 @@ git pull
 echo "Installing npm modules..."
 npm install
 echo "Building app..."
-npm run build
+npm run build:tsc
 echo "Restarting server..."
-pm2 restart all
+# pm2 restart all

@@ -1,19 +1,22 @@
 {
+  "extends": "@apify/tsconfig",
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"],
+    "target": "ES6",
     "module": "esnext",
-    "moduleResolution": "bundler",
     "moduleDetection": "force",
-    "target": "esnext",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowImportingTsExtensions": true, // Add this line
-    "noEmit": true
+    "noUnusedLocals": false,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": [
+    "src/**/*.ts" // Adjust this to match your source file structure
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts" // Exclude test files if needed
+  ]
 }

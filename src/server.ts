@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import { runCrawler } from './crawler.ts';
+import { runCrawler } from './crawler';
 
 const app = express();
 app.use(express.json()); // Parse JSON bodies
